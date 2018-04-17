@@ -1,0 +1,75 @@
+<form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+    <div class="row">
+        <div class="input-field col s12">
+            <label for="uname" class="">Username*</label>
+            <input id="uname" name="uname" type="text" data-error=".errorTxt1" aria-required="true" aria-invalid="false" class="valid">
+            <div class="errorTxt1"></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="cemail" class="">E-Mail *</label>
+            <input id="cemail" type="email" name="cemail" data-error=".errorTxt2" aria-required="true" class="error" aria-describedby="cemail-error" aria-invalid="true">
+            <div class="errorTxt2"><div id="cemail-error" class="error">This field is required.</div></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="password" class="active">Password *</label>
+            <input id="password" type="password" name="password" data-error=".errorTxt3" aria-required="true" aria-invalid="true" class="error" aria-describedby="password-error">
+            <div class="errorTxt3"><div id="password-error" class="error">Please enter at least 5 characters.</div></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="cpassword" class="active">Confirm Password *</label>
+            <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4" aria-required="true" aria-invalid="true" class="error" aria-describedby="cpassword-error">
+            <div class="errorTxt4"><div id="cpassword-error" class="error">Please enter the same value again.</div></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="curl" class="">URL *</label>
+            <input id="curl" type="url" name="curl" data-error=".errorTxt5" aria-required="true" class="error" aria-describedby="curl-error" aria-invalid="true">
+            <div class="errorTxt5"><div id="curl-error" class="error">Enter your website</div></div>
+        </div>
+        <div class="col s12">
+            <label for="crole">Role *</label>
+            <select class="error browser-default" id="crole" name="crole" data-error=".errorTxt6" aria-required="true" aria-describedby="crole-error" aria-invalid="true">
+                <option value="" disabled="" selected="">Choose your profile</option>
+                <option value="1">Manager</option>
+                <option value="2">Developer</option>
+                <option value="3">Business</option>
+            </select>
+            <div class="input-field">
+                <div class="errorTxt6"><div id="crole-error" class="error">This field is required.</div></div>
+            </div>
+        </div>
+        <div class="input-field col s12">
+            <textarea id="ccomment" name="ccomment" class="materialize-textarea validate error" data-error=".errorTxt7" aria-required="true" aria-describedby="ccomment-error" aria-invalid="true"></textarea>
+            <label for="ccomment" class="">Your comment *</label>
+            <div class="errorTxt7"><div id="ccomment-error" class="error">This field is required.</div></div>
+        </div>
+        <div class="col s12">
+            <label for="genter_select">Gender *</label>
+            <p>
+                <input name="cgender" type="radio" id="gender_male" data-error=".errorTxt8" aria-required="true" class="error" aria-describedby="cgender-error">
+                <label for="gender_male">Male</label>
+            </p>
+            <p>
+                <input name="cgender" type="radio" id="gender_female" value="f" class="error">
+                <label for="gender_female">Female</label>
+            </p>
+            <div class="input-field">
+                <div class="errorTxt8"><div id="cgender-error" class="error">This field is required.</div></div>
+            </div>
+        </div>
+        <div class="col s12">
+            <label for="tnc_select">T&amp;C *</label>
+            <p>
+                <input type="checkbox" class="checkbox error" id="cagree" name="cagree" data-error=".errorTxt9" aria-required="true" aria-describedby="cagree-error">
+                <label for="cagree">Please agree to our policy</label>
+            </p>
+            <div class="input-field">
+                <div class="errorTxt6"><div id="crole-error" class="error">This field is required.</div></div>
+            </div>
+        </div>
+        <div class="input-field col s12">
+            <button class="btn waves-effect waves-light right submit" type="submit" name="action">Submit
+                <i class="mdi-content-send right"></i>
+            </button>
+        </div>
+    </div>
+</form>

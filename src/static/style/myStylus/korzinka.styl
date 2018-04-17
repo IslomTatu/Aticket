@@ -1,0 +1,102 @@
+#korzinka
+  border 1px solid white
+  img
+    width 100%
+    height auto
+  .leftTicketCard
+    display flex
+    .buyTicket
+      align-self flex-end
+      -webkit-align-self flex-end
+  .ticket
+    border-left 2px dashed #666666
+  .aboutTicket
+    font-size 0.9em
+
+    .row
+      -webkit-box-shadow none !important
+      -moz-box-shadow none !important
+      box-shadow none !important
+      border none !important
+      margin-top 0 !important
+      margin-bottom 0 !important
+      line-height 15px
+    .col
+      margin 0 !important
+      padding-top 0 !important
+      padding-bottom 0 !important
+    .forTicket
+      font-weight bolder
+      line-height 10px
+      font-size 0.875em
+
+  .countTicket
+    font-weight bolder
+
+  .buyTicket
+    border none !important
+    -webkit-box-shadow none !important
+    -moz-box-shadow none !important
+    box-shadow none !important
+    background-color white
+
+
+
+    a
+      background-color #fc0
+      border none !important
+      -webkit-box-shadow none !important
+      -moz-box-shadow none !important
+      box-shadow none !important
+      color black
+  .payment
+    a
+      margin-left 10%
+      background-color white !important
+      cursor pointer
+      &:hover
+
+        z-index 999999
+
+      img
+        opacity 0.5
+        -webkit-transition: all 0.4s
+        -moz-transition: all 0.4s
+        -ms-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+        &:hover
+          opacity 1
+          -webkit-transform: scale(2,2)
+          -moz-transform: scale(2,2)
+          -ms-transform: scale(2,2)
+          -o-transform: scale(2,2)
+          transform: scale(2,2)
+      .chosen
+        opacity 1 !important
+        -webkit-transform: scale(1.7,1.7)
+        -moz-transform: scale(1.7,1.7)
+        -ms-transform: scale(1.7,1.7)
+        -o-transform: scale(1.7,1.7)
+        transform: scale(1.7,1.7)
+
+#delete
+  @media screen and (max-width 900px)
+    width 70%
+  .cardBtns
+    margin-top 10px
+    .thanks
+      margin-left 5px
+      background-color transparent
+      color black
+      box-shadow none
+      border 1px solid #999
+      text-transform none
+    .delete
+      margin-right 5px
+      background-color #fc0
+      color black
+      -webkit-box-shadow none
+      -moz-box-shadow none
+      box-shadow none
+      text-transform none

@@ -1,0 +1,50 @@
+form.col.s12#formValidate(
+    method="get"
+    action=""
+    novalidate="novalidate"
+    )
+    .row.login
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            input.valid(type="text" placeholder="User name" id="uname" name="uname" data-error=".errorTxt1" aria-required="true" aria-invalid="false")
+            .errorTxt1
+        .col.s1.l1.m1.xl1
+
+    .row.login
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            input(type="email" id="cemail" name="cemail" placeholder="Email address" data-error=".errorTxt2" aria-required="true" class="error" aria-describedby="cemail-error" aria-invalid="true")
+            .errorTxt2
+                #cemail-error.error This field is required.
+        .col.s1.l1.m1.xl1
+
+    .row.login
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            input(id="password" type="password" name="password" placeholder="Password" data-error=".errorTxt3" aria-required="true" aria-invalid="true" class="error" aria-describedby="password-error")
+            .errorTxt3
+                #password-error.error Please enter at least 5 characters.
+        .col.s1.l1.m1.xl1
+
+    .row.login
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            input(id="cpassword" type="password" placeholder="password confirmation" name="cpassword" data-error=".errorTxt4" aria-required="true" aria-invalid="ture" aria-describedby="cpassword-error")
+            .errorTxt4
+                #cpassword-error.error Please enter the same value again.
+        .col.s1.l1.m1.xl1
+
+    .row.login
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            input(id="tel" type="text" placeholder="Phone number")
+        .col.s1.l1.m1.xl1
+    .row
+        .col.s1.l1.m1.xl1
+        .col.s10.l10.m10.xl10
+    .row
+        .col.s1.l1.m1.xl1
+        .input-field.col.s10.l10.m10.xl10
+            button.btn.right.submit(type="submit" name="action") Submit
+                i.mdi-content-send.right
+        .col.s1.l1.m1.xl1

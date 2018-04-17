@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="ATicket">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Compiled and minified CSS -->
+  <!--link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.css")-->
+  <link href="static/css/materialize.min.css" rel="stylesheet">
+  <link href="static/css/main.min.css" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <div class="loader"></div>
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col l2">
+          <div class="logo"><a href="index.html">ATicket</a></div>
+        </div>
+        <div class="col s6 show-on-medium-and-down right">
+          <div class="search2 card">
+            <input type="search" placeholder="search your movie"><i class="material-icons i-search">search</i>
+          </div>
+        </div>
+        <div class="col l5 hide-on-med-and-down">
+          <div class="search1 card">
+            <input id="search" type="search" placeholder="search your movie"><i class="material-icons i-search">search</i>
+          </div>
+        </div>
+        <div class="col l5 hide-on-med-and-down right-li">
+          <ul class="row" id="login" style="display: block;">
+            <li class="col list-items how"><a href="#">How buy a ticket</a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-facebook--><img class="lang activeLang" src="static/img/uzb.png"></a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-telegram--><img class="lang" src="static/img/ru.png"></a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-instagram--><img class="lang" src="static/img/eng.png"></a></li>
+            <li class="list-items col right loginList"><a class="modal-trigger button-login btn" href="#modal1"><i class="fas fa-sign-in-alt"></i><span class="forLogin">Login</span></a></li>
+          </ul>
+          <ul class="row" id="logout" style="display: none;">
+            <li class="col list-items how"><a href="#">How buy a ticket</a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-facebook--><img class="lang activeLang" src="static/img/uzb.png"></a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-telegram--><img class="lang" src="static/img/ru.png"></a></li>
+            <li class="col list-items langs"><a href="#">
+                <!--i.fab.fa-instagram--><img class="lang" src="static/img/eng.png"></a></li>
+            <li class="list-items col saves"><a class="logout" href="pages/korzinka/index.html"><i class="fas fa-shopping-cart"><span class="badge">4</span></i></a></li>
+            <li class="list-items col user right"><i class="fas fa-user"></i>
+              <div class="userProfile container">
+                <div class="row">
+                  <div class="col"><i class="fas fa-user"></i></div>
+                  <div class="col"><a href="">Nickname</a></div>
+                  <div class="col"><a href="">email@gmail.com</a></div>
+                </div>
+                <div class="row">
+                  <div class="col"><i class="fas fa-cog"></i></div>
+                  <div class="col"><a href="pages/user/index.html">Profile</a></div>
+                </div>
+                <div class="row" style="border: none !important;">
+                  <div class="col"><i class="fas fa-sign-out-alt"></i></div>
+                  <div class="col"><a href="">Logout</a></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="nav-main" id="nav">
+        <div class="nav-wrapper"><a class="button-collapse" data-activates="mobile-demo" href="#"><i class="material-icons">menu</i></a>
+          <ul class="hide-on-med-and-down nav-ul">
+            <li><a href="pages/download/index.html">Movie</a></li>
+            <li><a href="pages/category/index.html">Concert</a></li>
+            <li><a href="pages/category/index.html">Theatre</a></li>
+            <li><a href="pages/category/index.html">Exhibition</a></li>
+            <li><a href="pages/category/index.html">Child</a></li>
+            <li><a href="pages/category/index.html">Sport</a></li>
+            <li><a href="pages/category/index.html">Circus</a></li>
+            <li class="dropdown1"><a class="more">More
+                <ul class="dropdown2">
+                  <li><a href="pages/category/index.html">Show</a></li>
+                  <li><a href="pages/category/index.html">Musical</a></li>
+                  <li><a href="pages/category/index.html">Master-class</a></li>
+                  <li><a href="pages/category/index.html">Lecture</a></li>
+                  <li><a href="pages/category/index.html">Free</a></li>
+                </ul></a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="ifLogin" style="display: none;">
+              <div class="user-view">
+                <div class="background"><img src="static/img/logoutback.png"></div><img class="circle" src="static/img/user.png"><a href="#!"><span class="white-text name">John Doe</span></a><a href="#!"><span class="white-text email">johnDoe@gmail.com</span></a>
+              </div>
+            </li>
+            <li class="ifLogout" style="display: block;">
+              <div class="user-view">
+                <div class="background"><img src="static/img/loginback.jpg"></div><a class="modal-trigger button-login btn" href="#modal1"><i class="fas fa-sign-in-alt"><span class="forLogin">Login</span></i></a>
+              </div>
+            </li>
+            <li><a href="pages/category/index.html" style="border: 1px solid black;"><i class="material-icons">android</i>Movie</a></li>
+            <li><a href="pages/category/index.html">Concert</a></li>
+            <li><a href="pages/category/index.html">Theatre</a></li>
+            <li><a href="pages/category/index.html">Exhibition</a></li>
+            <li><a href="pages/category/index.html">Child</a></li>
+            <li><a href="pages/category/index.html">Sport</a></li>
+            <li><a href="pages/category/index.html">Circus</a></li>
+            <li><a href="pages/category/index.html">Show</a></li>
+            <li><a href="pages/category/index.html">Musical</a></li>
+            <li><a href="pages/category/index.html">Master-class</a></li>
+            <li><a href="pages/category/index.html">Lecture</a></li>
+            <li><a href="pages/category/index.html">Free</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container-fluid" id="slide">
+    <div class="items-carousel">
+      <div class="item"><img src="static/img/11.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/12.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/13.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/rayhon.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title sdf sd  sdgsd</h5>
+            <p class="grey-text">somewhere sdgsdf vggsdf vsd f</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/14.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/11.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/3.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title</h5>
+            <p class="grey-text">somewheresdf sdfgsdfgsd fgsdfgsdf gsdf gsdf gd sdgs dfgsd fg</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+      <div class="item"><img src="static/img/15.jpg">
+        <div class="row data-item sliderBack">
+          <div class="col s3 l3 date">
+            <p class="pdate">18</p>
+            <p>Fev</p>
+          </div>
+          <div class="col s9 l9 where">
+            <h5>Title sd sdfv sdfb fgb dfgb ghn fgnfg bfgdbfgnhfgngjmgj mgj</h5>
+            <p class="grey-text">somewhere</p>
+          </div>
+        </div>
+        <div class="price">
+          <label>from 800$</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal1">
+    <div class="modal-content"><i class="right far fa-times-circle modal-close"></i>
+      <h4 class="center"><span class="red-text">A</span>Ticket</h4>
+      <div class="row login">
+        <form class="col s12">
+          <div class="row loginRow">
+            <div class="input-field col s12">
+              <input class="validate" id="login1" type="email" placeholder="Email" required="" name="login1">
+              <label for="login1" id="errorEmail"></label>
+            </div>
+          </div>
+          <div class="row loginRow">
+            <div class="input-field col s12">
+              <input class="validate" id="password" type="password" name="password" placeholder="Password" required="" data-error="Check password" aria-required="true">
+              <label for="password" id="errorPassword"></label>
+            </div>
+            <div id="remember">
+              <input class="filled-in" id="filled-in-box" type="checkbox" name="remember">
+              <label for="filled-in-box" id="checkPass">another computer</label>
+            </div>
+          </div>
+          <div class="row loginRow">
+            <div class="col s12 l12"><a class="btn enter" href="#" id="checkAjax">Enter</a></div>
+          </div>
+          <div class="row">
+            <div class="col s12 l12">
+              <p class="via">You can enter via social network</p>
+            </div>
+          </div>
+          <div class="row viaConnect">
+            <div class="col s12 l12"><a class="btn con">Via Vkontakte<i class="fab fa-vk"></i></a></div>
+          </div>
+          <div class="row viaConnect">
+            <div class="col s12 l12"><a class="btn face">Via Facebook<i class="fab fa-facebook"></i></a></div>
+          </div>
+          <div class="row viaConnect">
+            <div class="col s12 l12"><a class="btn odno">Via Odnoklassniki<i class="fab fa-odnoklassniki"></i></a></div>
+          </div>
+          <p class="via"><a href="#">I can't sign up</a></p>
+        </form>
+      </div>
+      <p class="via registration"><a href="#">Registration</a></p>
+    </div>
+    <div class="row" id="registration"><i class="right far fa-times-circle modal-close regBack"></i>
+      <div class="col l12 main-page">
+        <h3 class="yandex">Registration</h3>
+        <div class="row">
+          <form class="col s12" id="formValidate">
+            <div class="row login">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="input-field col s10 l10 m10 xl10">
+                <input class="validate" type="text" placeholder="User name" id="uname" name="uname">
+                <label for="uname" id="forUserName"></label>
+              </div>
+              <div class="col s1 l1 m1 xl1"></div>
+            </div>
+            <div class="row login">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="input-field col s10 l10 m10 xl10">
+                <input class="validate" type="email" id="cemail" name="cemail" placeholder="Email address" required="" aria-required="true">
+                <label for="cemail" id="forEmail"></label>
+              </div>
+              <div class="col s1 l1 m1 xl1"></div>
+            </div>
+            <div class="row login">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="input-field col s10 l10 m10 xl10">
+                <input class="validate" id="password1" type="password" name="password1" placeholder="Password" required="" aria-required="true">
+                <label for="password1" id="forPassword"></label>
+              </div>
+              <div class="col s1 l1 m1 xl1"></div>
+            </div>
+            <div class="row login">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="input-field col s10 l10 m10 xl10">
+                <input class="validate" id="cpassword" type="password" name="cpassword" placeholder="password confirmation" required="" aria-required="true">
+              </div>
+              <div class="col s1 l1 m1 xl1"></div>
+            </div>
+            <div class="row login">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="input-field col s10 l10 m10 xl10">
+                <input class="validate" id="tel" type="tel" placeholder="Tel: +998 " value="" name="tel">
+                <label for="tel" id="forTel"></label>
+              </div>
+              <div class="col s1 l1 m1 xl1"></div>
+            </div>
+            <div class="row">
+              <div class="col s1 l1 m1 xl1"></div>
+              <div class="col s10 l10 m10 xl10"></div>
+            </div>
+            <button class="btn sign regAction" type="submit" name="submit" id="submit">Register</button>
+          </form>
+        </div>
+      </div>
+      <div class="kkk"></div>
+      <p class="via iHave"><a href="#">I have already had an account</a></p>
+    </div>
+  </div>
+  <div class="container-fluid allMain" id="cardRoute">
+    <div class="cards">
+      <h5>Coming soon</h5><a href="#">view more ></a>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/11.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/18.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/20.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/2.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+    </div>
+  </div>
+  <div class="container-fluid allMain" id="cardRoute">
+    <div class="cards">
+      <h5>Movie in this week</h5><a href="#">view more ></a>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/13.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/14.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/11.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/12.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+    </div>
+  </div>
+  <div class="container-fluid allMain" id="cardRoute">
+    <div class="cards">
+      <h5>Popular theatres in this week</h5><a href="#">view more ></a>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/11.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/16.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/rayhon.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 l3"><a href="pages/alone/index.html">
+          <div class="card">
+            <div class="card-image"><img src="static/img/15.jpg"><a href="#!"><i class="far fa-bookmark"></i></a>
+              <div class="price-begin">
+                <label>price</label>
+              </div>
+            </div>
+            <div class="card-content">
+              <p class="grey-text">type</p><span class="card-title">Movie name</span>
+              <div class="when">
+                <p class="grey-text">10 february and 13 march</p>
+              </div>
+              <div class="where">
+                <p class="grey-text">Istiqlol</p>
+              </div>
+            </div>
+          </div></a></div>
+    </div>
+  </div>
+  <div class="container-fluid" id="lovely">
+    <h5>You may like it</h5>
+    <div class="divider"></div>
+    <div class="row">
+      <div class="col s12 m6 main-like"><a href="pages/category/index.html">
+          <div class="like odd">
+            <div class="black-fon"></div><img src="static/img/16.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like"><a href="pages/category/index.html">
+          <div class="like even">
+            <div class="black-fon"></div><img src="static/img/17.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like"><a href="pages/category/index.html">
+          <div class="like odd">
+            <div class="black-fon"></div><img src="static/img/18.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like"><a href="pages/category/index.html">
+          <div class="like even">
+            <div class="black-fon"></div><img src="static/img/19.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like toToggle"><a href="pages/category/index.html">
+          <div class="like odd">
+            <div class="black-fon"></div><img src="static/img/20.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like toToggle"><a href="pages/category/index.html">
+          <div class="like even">
+            <div class="black-fon"></div><img src="static/img/21.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like toToggle"><a href="pages/category/index.html">
+          <div class="like odd">
+            <div class="black-fon"></div><img src="static/img/22.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div>
+      <div class="col s12 m6 main-like toToggle"><a href="pages/category/index.html">
+          <div class="like even">
+            <div class="black-fon"></div><img src="static/img/23.jpg">
+            <div class="title-like">
+              <p>35 more</p>
+              <p style="color: white; z-index: 999;">ATicket recommend concert</p>
+            </div>
+          </div></a></div><a class="btn viewMore waves-light waves-effect">View more</a>
+    </div>
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="footer-content">
+        <div class="row">
+          <div class="col l3 m3 s12 foot-head-text">
+            <p class="font-weight-bold">Connect with us</p>
+          </div>
+          <div class="col l4 m6 s12">
+            <div class="email">
+              <input type="email" required>
+            </div>
+          </div>
+          <div class="col l3 m3 s12 dale">
+            <label class="btn">Dalee</label>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col l3 s6">
+            <div class="foot-content">
+              <p>ATicket Afisha</p><a class="text-darken-1 grey-text">about us</a><a class="text-darken-1 grey-text">about us</a><a class="text-darken-1 grey-text">about us</a>
+            </div>
+          </div>
+          <div class="col l3 s6">
+            <div class="foot-content">
+              <p>ATicket Afisha</p><a class="text-darken-1 grey-text">about us</a><a class="text-darken-1 grey-text">about us</a><a class="text-darken-1 grey-text">about us</a>
+            </div>
+          </div>
+          <div class="col l3 s6">
+            <div class="foot-content"><a class="foricon" href="http://facebook.com/abaduzofficial/" target="_blank"><i class="fab fa-facebook"></i></a><a class="foricon" href="https://t.me/abad_shop" target="_blank"><i class="fab fa-telegram"></i></a><a class="foricon" href="https://t.me/abad_shop" target="_blank"><i class="fab fa-instagram"></i></a>
+              <p class="text-lighten-1 grey-text">our social site click to see</p>
+            </div>
+          </div>
+          <div class="col l3 s6">
+            <div class="foot-content">
+              <div class="playStore"><a href="https://play.google.com/store/apps/details?id=uz.medialux.abad" target="_blank"><img src="static/img/playstore.png"></a></div>
+              <p class="grey-text lighten-1">download ATicket app</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col l3 s6">
+            <p class="grey-text darken-1">mobile version coming soon</p>
+          </div>
+          <div class="col l3 s6 right">
+            <p class="grey-text darken-1">2018 Tashkent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/libs.min.js"></script>
+  <!--script(src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js")-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+  <script src="static/js/main.min.js"></script>
+</body>

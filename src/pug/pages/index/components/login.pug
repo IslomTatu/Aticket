@@ -1,0 +1,104 @@
+#modal1.modal
+    .modal-content
+        i.right.far.fa-times-circle.modal-close
+        h4.center
+            span.red-text A
+            | Ticket
+        .row.login
+            form.col.s12
+                .row.loginRow
+                    .input-field.col.s12
+                        input#login1.validate(
+                            type="email"
+                            placeholder="Email"
+                            required=""
+                            name="login1"
+                        )
+                        label(for="login1" id="errorEmail")
+                .row.loginRow
+                    .input-field.col.s12
+                        input#password.validate(
+                        type="password"
+                        name="password" placeholder="Password"
+                        required=""
+                        data-error="Check password"
+                        aria-required="true"
+                        )
+                        label(for="password"  id="errorPassword")
+                    #remember
+                        input#filled-in-box.filled-in(type="checkbox" name="remember")
+                        label(for="filled-in-box" id="checkPass") another computer
+                .row.loginRow
+                    .col.s12.l12
+                        a.btn.enter(href="#" id="checkAjax") Enter
+
+                .row
+                    .col.s12.l12
+                        p.via You can enter via social network
+
+                .row.viaConnect
+                    .col.s12.l12
+                        a.btn.con Via Vkontakte
+                          i.fab.fa-vk
+                .row.viaConnect
+                    .col.s12.l12
+                      a.btn.face Via Facebook
+                        i.fab.fa-facebook
+                .row.viaConnect
+                    .col.s12.l12
+                     a.btn.odno Via Odnoklassniki
+                        i.fab.fa-odnoklassniki
+
+                p.via
+                    a(href="#") I can't sign up
+
+        p.via.registration
+            a(href="#") Registration
+
+
+    .row#registration
+        i.right.far.fa-times-circle.modal-close.regBack
+        .col.l12.main-page
+            h3.yandex Registration
+            .row
+                form.col.s12#formValidate
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(type="text" placeholder="User name" id="uname" name="uname")
+                            label(for="uname" id="forUserName")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(type="email" id="cemail" name="cemail" placeholder="Email address" required="" aria-required="true")
+                            label(for="cemail" id="forEmail")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="password1" type="password" name="password1" placeholder="Password" required="" aria-required="true")
+                            label(for="password1" id="forPassword")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="cpassword" type="password" name="cpassword" placeholder="password confirmation" required="" aria-required="true")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="tel" type="tel" placeholder="Tel: +998 " value="" name="tel")
+                            label(for="tel" id="forTel")
+                        .col.s1.l1.m1.xl1
+                    .row
+                        .col.s1.l1.m1.xl1
+                        .col.s10.l10.m10.xl10
+                    button.btn.sign.regAction(type="submit" name="submit" id="submit") Register
+        .kkk
+        p.via.iHave
+            a(href="#") I have already had an account

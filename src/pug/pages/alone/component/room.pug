@@ -1,0 +1,49 @@
+#hall-scheme.modal
+    .loader1
+    .row.infoRoomHead(style="border-bottom: 1px solid #bdbdbd !important")
+        .col.s12.l2.m3
+            img#imgAction
+        .col.s6.l5.m6
+            h5#nameAction name of movie
+            h4#whereAction where
+        .col.s4.l4.m1.hide-on-med-and-down
+            p.grey-text(style="float:right") Tashkent
+        .col.s2.l1.m1.forclose.right
+            img.modal-close(src="../../static/img/close.svg")
+    .row.infoRoom
+        .col.l9.s9.infoPrice
+            .row
+                .col.l4.s4
+                    i.fas.fa-circle(style="color: #31D61E")
+                    p empty place
+                .col.l4.s4
+                    i.fas.fa-square(style="color: #fc0; font-size: 1.2em")
+                    p your order
+                .col.l4.s4
+                    i.fas.fa-circle(style="color: grey")
+                    p bought
+        .col.l3.s3.center
+            label.time#timeAction 16:30
+
+    .row(style="text-align: center;").room-scheme
+        .col.l12.s12#room-scheme(style="text-align: center;")
+            .screen(style="height: 100px")
+            //******************100$******************************
+            //svg(height="40" width="40")
+            //    circle(data-price="100$" cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="red")
+            //svg(height="40" width="40")
+            //    circle(data-price="100$" cx="20" cy="20" r="10" stroke="black" stroke-width="1" fill="red")
+                //h1<==>
+
+
+
+    .row.modal-footer
+
+        .col.s6.l6.order.left
+            h3.count(style="display:inline") 0
+            h3(style="display:inline") $
+
+        .col.s12.l3.right
+            a(href="../korzinka/index.html").btn#buy.buy Buy
+
+

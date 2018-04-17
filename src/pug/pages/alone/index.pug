@@ -1,0 +1,41 @@
+doctype html
+
+head
+    meta(charset="UTF-8")
+    meta(name="description" content="ATicket")
+    meta(name="viewport" content="width=device-width initial-scale=1.0" )
+
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+    <!-- Compiled and minified CSS -->
+
+    link(href='../../static/css/materialize.min.css' rel='stylesheet')
+    link(href='../../static/css/tipso.min.css' rel='stylesheet')
+    link(href='../../static/css/main.min.css' rel='stylesheet')
+
+
+    title
+
+body
+    .loader
+    include component/header
+
+    //include component/navbar
+
+    include component/main
+    include component/table
+    include component/map
+    include component/room
+    include component/popular
+    include component/login
+    include component/footer
+
+
+
+    script(src='../../static/js/jquery.min.js')
+    script(src='../../static/js/libs.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js")
+    script(src="../../static/js/tipso.min.js")
+    script(src='../../static/js/main.min.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzgi5COtvqUj0Zq7uInykEWFMK09axXNo&callback=initMap"
+    async defer)

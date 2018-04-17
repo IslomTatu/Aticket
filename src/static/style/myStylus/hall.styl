@@ -1,0 +1,132 @@
+#hall-scheme
+  width 70%
+  height 100%
+  .row
+    margin 0 !important
+  .col
+    margin-top 1%
+    margin-bottom 0
+  .infoRoomHead
+    #imgAction
+      width 100%
+      height auto
+
+    .row
+      border none !important
+    .forclose
+      font-size 2em
+      font-weight lighter
+      text-align center
+      img
+        width 30px
+        height 30px
+      @media screen and (max-width: 490px)
+        img
+          width 30px
+          height 30px
+
+  .infoRoom
+    padding-bottom 10px
+    border-bottom  1px solid #bdbdbd !important
+
+    .time
+      border 1px solid #999999
+      padding 5px 10px
+      font-size 1.5em
+      color black
+      margin-top 0 !important
+      margin-bottom 0 !important
+
+    .infoPrice
+      i
+        display inline
+      p
+        display inline
+        //margin-left 10px
+svg
+  border 1px solid #eeeeee
+  -webkit-border-radius 5%
+  -moz-border-radius 5%
+  border-radius 5%
+  max-width 100% !important
+  height auto
+  background-color #f7f5f5
+  circle
+    stroke grey
+
+.back
+  background-color transparent
+  color black
+  box-shadow none
+  border #999999 1px solid
+  -webkit-border-radius 5%
+  -moz-border-radius 5%
+  border-radius 5%
+  padding 0 2%
+  &:hover
+    background-color transparent
+    -webkit-box-shadow none
+    -moz-box-shadow none
+    box-shadow none
+    border 1px solid black
+.buy
+  background-color #fc0
+  color black
+  -webkit-box-shadow none
+  -moz-box-shadow none
+  box-shadow none
+  border #999999 1px solid
+  -webkit-border-radius 5%
+  -moz-border-radius 5%
+  border-radius 5%
+  padding 0 2%
+  &:hover
+    background-color #f0bd00
+    -webkit-box-shadow none
+    -moz-box-shadow none
+    box-shadow none
+    border 1px solid black
+
+.room-scheme
+  text-align center !important
+  margin 0 auto !important
+
+
+#room-scheme
+  overflow scroll
+  .heyo
+    cursor pointer
+    -moz-transition 0.3s
+    -o-transition 0.3s
+    -webkit-transition 0.3s
+    transition 0.3s
+    &:hover
+      r 20
+
+  .active
+    display block
+
+
+  .disabled
+    cursor initial
+    fill grey !important
+    r 5
+  .bought
+    fill #fc0 !important
+    r 40
+    cursor pointer
+
+#hall-scheme
+  .modal-footer
+    border-top 1px solid #cbc9c9
+    height auto !important
+
+@media screen and (max-width: 600px)
+  svg
+    width 30px !important
+    height 30px !important
+  circle
+    cx 15
+    cy 15
+    r 5
+

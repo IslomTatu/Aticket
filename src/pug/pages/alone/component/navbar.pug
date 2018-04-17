@@ -1,0 +1,24 @@
+nav#nav-back.nav-main
+    .nav-wrapper
+        ul.hide-on-med-and-down.nav-ul
+            li(
+                v-for='i in 6'
+            )
+                a(
+                    :href="pageCategory[i-1].url"
+                    onclick="loadDoc()"
+                    ) {{pageCategory[i-1].name}}
+
+            a.dropdown-button.btn(
+                href="#"
+                data-activates='dropdown1'
+            ) More
+
+            ul#dropdown1.dropdown-content
+                li
+                    a(href="#") mmm
+                li
+                    a(href="#") mmm
+                li
+                    a(href="#") mmm
+

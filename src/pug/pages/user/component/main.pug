@@ -1,0 +1,49 @@
+.container-fluid#user
+    h5.center User Page
+    .row
+        .col.l6.s12.m6(style="padding: 2%")
+          h5.center
+              span.red-text A
+              |Ticket
+          .forUser-payment.center
+              p You can buy from any payment types if you want
+              a.paymentType(href="#buyy")
+                  img(src="../../static/img/click.png" style="height: 50px; width: auto" )
+              a.paymentType(href="#buyy")
+                  img(src="../../static/img/payme.png" style="height: 50px; width: auto" )
+              a.paymentType(href="#buyy")
+                  img(src="../../static/img/woywo.png" style="height: 50px; width: auto" )
+              a.paymentType(href="#buyy")
+                  img(src="../../static/img/upay.png" style="height: 50px; width: auto" )
+
+
+
+
+        .col.l6.s12.m6(style="padding: 2%")
+            h5 You can improve your profile information there
+            .input-field.row
+                .col
+                    label Edit your name surname
+                    i.material-icons.prefix(style="color:black") account_circle
+                    input(type="text" placeholder="Edit name")
+                    input(type="text" placeholder="Edit family")
+                .col
+                    i.material-icons.prefix(style="color:black") phone
+                    input(type="text" placeholder="+ ( 998 ) ")
+            .input-field.row
+                .col
+                    label Where you live or work
+                    i.material-icons.prefix(style="color:black") domain
+                    input(type="text" placeholder="where are you from")
+                    input(type="text" placeholder="where you work")
+
+            .input-field.row
+                .col
+                    label Change your password
+                    i.material-icons.prefix(style="color:black") security
+                    input(type="password" placeholder="your old password")
+                    input(type="password" placeholder="new password")
+                    input(type="password" placeholder="repeat new password")
+            .row
+                .col.m12.s12
+                    a.btn.saveUser.right Save all

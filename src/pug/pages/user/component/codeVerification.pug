@@ -1,0 +1,14 @@
+.container-fluid#codeVerification
+    .container(style="padding: 2% 0 !important")
+        h5.center Verification Code
+        .row.codeVer
+            .col.l12.s12.m11
+                h6 Please enter verification code which we have sent your email or phone
+                .row
+                    form.col.l12
+                        .row
+                            .col.forInput
+                                input(type="text" id="code" name="code" aria-required="true" required="")
+                                label(for="code" id="forCode")
+                            .col.forButton
+                                button(type="submit" id="codeSubmit" name="codeSubmit") Submit

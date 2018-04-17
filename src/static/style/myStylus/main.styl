@@ -1,0 +1,158 @@
+*
+  font-family "Roboto", sans-serifserif
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  &:after
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+  &:before
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+body
+  background-color #eeeeee
+
+.container-fluid
+  margin 0 3.5% !important
+  background-color white
+@media screen and (min-width 1380px)
+  body
+    .container-fluid
+      width 75%
+      margin 0 auto !important
+@media screen and (min-width 1856px)
+  body
+    .container-fluid
+      width 65%
+      margin 0 auto !important
+@media screen and (min-width 2156px)
+  body
+    .container-fluid
+      width 60%
+      margin 0 auto !important
+@media screen and (min-width 2336px)
+  body
+    .container-fluid
+      width 55%
+      margin 0 auto !important
+@media screen and (min-width 2536px)
+  body
+    .container-fluid
+      width 1300px
+      margin 0 auto !important
+@media screen and (max-width 1024px)
+  #hall-scheme
+    width 90%
+@media screen and (max-width 900px)
+  #hall-scheme
+    width 95%
+input &:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+  background-color transparent
+  border-bottom none
+  border-radius 0
+  outline none
+  height 3rem
+  width 100%
+  font-size 1rem
+  margin 0 0 15px 0
+  padding 0
+  box-shadow none
+  box-sizing content-box
+  transition all 0.3s
+
+input:not([type])&:focus&:not([readonly]),
+input[type=text]&:focus&:not([readonly]),
+input[type=password]&:focus&:not([readonly]),
+input[type=email]&:focus&:not([readonly]),
+input[type=url]&:focus&:not([readonly]),
+input[type=time]&:focus&:not([readonly]),
+input[type=date]&:focus&:not([readonly]),
+input[type=datetime]&:focus&:not([readonly]),
+input[type=datetime-local]&:focus&:not([readonly]),
+input[type=tel]&:focus&:not([readonly]),
+input[type=number]&:focus&:not([readonly]),
+input[type=search]&:focus&:not([readonly])
+
+  border-bottom none
+  box-shadow none
+
+.fab
+  border none !important
+.far
+  border none !important
+i
+  border none !important
+.fa-facebook-official
+  color #3b5998
+
+.fa-facebook
+  color #3b5998
+.fa-telegram
+  color dodgerblue
+.fa-instagram
+  color #cd486b
+.loader
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 100%
+  z-index 99999999 !important
+  background url('../img/loading_spinner.gif') 50% 50% no-repeat rgb(249,249,249)
+.loader1
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 100%
+  z-index 99999999 !important
+  background url('../img/loading_spinner.gif') 50% 50% no-repeat rgb(249,249,249)
+.saved
+  opacity 1 !important
+  -moz-opacity 1 !important
+  color red !important
+
+@media screen and (max-width: 1250px)
+  #modal1
+    width 30%
+@media screen and (max-width: 1020px)
+  #modal1
+    width 40%
+@media screen and (max-width: 780px)
+  #modal1
+    width 50%
+@media screen and (max-width: 600px)
+  #modal1
+    width 70%
+
+input
+  &:-webkit-autofill
+    background-color white !important
+  &:-moz-autofill
+    background-color white !important
+  &:-o-autofill
+    background-color white !important
+  &:-khtml-autofill
+    background-color white !important
+
+.tooltipped
+  z-index 999999999 !important
+  &:after
+    z-index 999999999 !important
+  &:before
+    z-index 999999999 !important
+.modal
+  z-index 9999 !important

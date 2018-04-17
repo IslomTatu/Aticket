@@ -1,0 +1,103 @@
+#modal1.modal
+    .modal-content
+        i.right.far.fa-times-circle.modal-close
+        h4.center
+            span.red-text A
+            | Ticket
+        .row.login
+            form.col.s12
+                .row.loginRow
+                    .input-field.col.s12
+                        input#login.validate(
+                            type="email"
+                            placeholder="Email"
+                            required=""
+                            name="login"
+                        )
+                        label(for="login" data-error="This account is not exist")
+                .row.loginRow
+                    .input-field.col.s12
+                        input#password.validate(
+                        type="password"
+                        name="password" placeholder="Password"
+                        required=""
+                        data-error="Check password"
+                        aria-required="true"
+                        )
+                        label(for="password" data-error="check your password")
+                    #remember
+                        input#filled-in-box.filled-in(type="checkbox")
+                        label(for="filled-in-box") another computer
+                .row.loginRow
+                    .col.s12.l12
+                        a.btn.enter(href="#") Enter
+
+                .row
+                    .col.s12.l12
+                        p.via You can enter via social network
+
+                .row.viaConnect
+                    .col.s12.l12
+                        a.btn.con Via Vkontakte
+                          i.fab.fa-vk
+                .row.viaConnect
+                    .col.s12.l12
+                      a.btn.face Via Facebook
+                        i.fab.fa-facebook
+                .row.viaConnect
+                    .col.s12.l12
+                     a.btn.odno Via Odnoklassniki
+                        i.fab.fa-odnoklassniki
+
+                p.via
+                    a(href="#") I can't sign up
+
+        p.via.registration
+            a(href="#") Registration
+
+
+    .row#registration
+        i.right.far.fa-times-circle.modal-close.regBack
+        .col.l12.main-page
+            h3.yandex Registration
+            .row
+                form.col.s12#formValidate
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(type="text" placeholder="User name" id="uname" name="uname" required="" aria-required="true")
+                            label(for="uname" data-error="Please write your name" data-success="right")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(type="email" id="cemail" name="cemail" placeholder="Email address" required="" aria-required="true")
+                            label(for="cemail" data-error="please write your email@example.com" data-success="right")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="password1" type="password" name="password" placeholder="Password" required="" aria-required="true")
+                            label(for="password1" data-error="at least 5 characteristics")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="cpassword" type="password" name="cpassword" placeholder="password confirmation" required="" aria-required="true")
+                        .col.s1.l1.m1.xl1
+
+                    .row.login
+                        .col.s1.l1.m1.xl1
+                        .input-field.col.s10.l10.m10.xl10
+                            input.validate(id="tel" type="tel" placeholder="Tel: +998 " value="+998 " pattern="+998 [0-9]{2}[0-9]{3}[0-9]{4}" size="14" minlength="14" maxlength="14")
+                        .col.s1.l1.m1.xl1
+                    .row
+                        .col.s1.l1.m1.xl1
+                        .col.s10.l10.m10.xl10
+                    button.btn.sign.regAction(type="submit") Register
+        .kkk
+        p.via.iHave
+            a(href="#") I have already had an account

@@ -1,0 +1,208 @@
+header
+    .container-fluid
+        .row
+            .col.l2
+                .logo
+                    a(
+                        href="index.html"
+                    ) ATicket
+            .col.s6.show-on-medium-and-down.right
+                .search2.card
+                    input(
+                    type="search" placeholder="search your movie")
+                    i.material-icons.i-search search
+            .col.l5.hide-on-med-and-down
+                .search1.card
+                    input(
+                    id="search"
+                    type="search" placeholder="search your movie")
+                    i.material-icons.i-search search
+            .col.l5.hide-on-med-and-down.right-li
+                ul.row#login(style="display: block")
+                    li.col.list-items.how
+                        a(
+                            href="#"
+                        ) How buy a ticket
+
+                    li.col.list-items.langs
+                        a(
+                            href="#"
+                        )
+                            //i.fab.fa-facebook
+                            img.lang.activeLang(src="static/img/uzb.png")
+                    li.col.list-items.langs
+                        a(
+                        href="#"
+                        )
+                            //i.fab.fa-telegram
+                            img.lang(src="static/img/ru.png")
+                    li.col.list-items.langs
+                        a(
+                        href="#"
+                        )
+                            //i.fab.fa-instagram
+                            img.lang(src="static/img/eng.png")
+
+                    li(class= 'list-items col right loginList')
+                        a(href='#modal1' class='modal-trigger button-login btn')
+                            i(class='fas fa-sign-in-alt')
+                            span(class='forLogin') Login
+
+
+                ul.row#logout(style="display: none")
+                    li.col.list-items.how
+                        a(
+                        href="#"
+                        ) How buy a ticket
+
+                    li.col.list-items.langs
+                        a(
+                        href="#"
+                        )
+                            //i.fab.fa-facebook
+                            img.lang.activeLang(src="static/img/uzb.png")
+                    li.col.list-items.langs
+                        a(
+                        href="#"
+                        )
+                            //i.fab.fa-telegram
+                            img.lang(src="static/img/ru.png")
+                    li.col.list-items.langs
+                        a(
+                        href="#"
+                        )
+                            //i.fab.fa-instagram
+                            img.lang(src="static/img/eng.png")
+                    li(class='list-items col saves')
+                        a(href='pages/korzinka/index.html' class='logout')
+                            i(class='fas fa-shopping-cart')
+                                span(class='badge') 4
+                    li(class='list-items col user right')
+                        i(class='fas fa-user')
+                        .userProfile.container
+                            .row
+                                .col
+                                    i(class='fas fa-user')
+                                .col
+                                    a(href="") Nickname
+                                .col
+                                    a(href="") email@gmail.com
+                            .row
+                                .col
+                                    i(class='fas fa-cog')
+                                .col
+                                    a(href="pages/user/index.html") Profile
+                            .row(style="border: none !important")
+                                .col
+                                    i(class='fas fa-sign-out-alt')
+                                .col
+                                    a(href="") Logout
+
+
+
+
+        nav#nav.nav-main
+
+            .nav-wrapper
+                a.button-collapse(data-activates="mobile-demo" href="#")
+                    i.material-icons menu
+                ul.hide-on-med-and-down.nav-ul
+                    li
+                        a(
+                        href="pages/download/index.html"
+                        ) Movie
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Concert
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Theatre
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Exhibition
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Child
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Sport
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Circus
+                    li.dropdown1
+                        a.more(
+                        ) More
+                            ul.dropdown2
+                                li
+                                    a(href="pages/category/index.html") Show
+                                li
+                                    a(href="pages/category/index.html") Musical
+                                li
+                                    a(href="pages/category/index.html") Master-class
+                                li
+                                    a(href="pages/category/index.html") Lecture
+                                li
+                                    a(href="pages/category/index.html") Free
+                ul.side-nav#mobile-demo
+                    li.ifLogin(style="display: none")
+                        .user-view
+                            .background
+                                img(src="static/img/logoutback.png")
+                            img(class="circle" src="static/img/user.png")
+                            a(href="#!")
+                                span.white-text.name John Doe
+                            a(href="#!")
+                                span.white-text.email johnDoe@gmail.com
+                    li.ifLogout(style="display: block")
+                        .user-view
+                            .background
+                                img(src="static/img/loginback.jpg")
+                            a(href='#modal1' class='modal-trigger button-login btn')
+                                i(class='fas fa-sign-in-alt')
+                                   span(class='forLogin') Login
+
+                    li
+                        a(
+                        href="pages/category/index.html" style="border: 1px solid black;")
+                            i.material-icons android
+                            | Movie
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Concert
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Theatre
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Exhibition
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Child
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Sport
+                    li
+                        a(
+                        href="pages/category/index.html"
+                        ) Circus
+                    li
+                        a(href="pages/category/index.html") Show
+                    li
+                        a(href="pages/category/index.html") Musical
+                    li
+                        a(href="pages/category/index.html") Master-class
+                    li
+                        a(href="pages/category/index.html") Lecture
+                    li
+                        a(href="pages/category/index.html") Free

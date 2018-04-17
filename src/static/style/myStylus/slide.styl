@@ -1,0 +1,136 @@
+.items-carousel
+  border 1px solid #f7f5f5
+  overflow hidden
+  background-color #f7f5f5
+  position relative
+  padding 3% 0
+  &:hover
+    .next
+      display block !important
+    .prev
+      display block !important
+
+  .item
+    display inline-block
+    background-size cover
+    position relative
+    text-align center
+    &:hover
+      img
+        opacity 0.9
+        -moz-opacity 0.9
+
+
+    img
+      width 92%
+      height 210px
+      cursor pointer
+
+
+    .data-item
+      background-color #3e6f3e
+      position absolute
+      bottom -14px
+      width 92%
+      height 64px
+      left 4%
+      cursor pointer
+      text-align left
+      color white
+      border none
+
+      .date
+        border-right #999999 1px solid
+        width 20%
+        text-align center
+        p
+          line-height 0 !important
+          font-size small
+        .pdate
+          font-size 1.3em
+
+      .where
+        display block
+        font-size 1em
+        margin 2% 0
+        line-height normal !important
+        h5
+          font-size 1.3em
+          margin-top 2%
+          white-space pre
+          overflow hidden
+          -ms-text-overflow ellipsis
+          text-overflow ellipsis
+        p
+          line-height normal
+          margin-top -2%
+          white-space pre
+          overflow hidden
+          text-overflow ellipsis
+          -ms-text-overflow ellipsis
+
+    .price
+      position absolute
+      top 5%
+      right 7%
+      height 22px
+      width 70px
+      background-color #fc0
+
+      label
+        color black
+        font-size 0.7em
+
+
+  .next
+    position absolute
+    top 35%
+    right 20px
+    z-index 999
+    width 50px
+    height 50px
+    cursor pointer
+    background-color black
+    color white
+    text-align center
+    font-size 2.2em
+    -moz-opacity 0.7
+    opacity 0.7
+    -webkit-border-radius 50%
+    -moz-border-radius 50%
+    border-radius 50%
+    border 1px solid white
+    display none !important
+    &:hover
+      opacity 1
+      -moz-opacity 1
+
+  .prev
+    position absolute
+    top 35%
+    left 20px
+    width 50px
+    height 50px
+    z-index 9999
+    cursor pointer
+    background-color black
+    -moz-opacity .7
+    opacity .7
+    color white
+    font-size 2.2em
+    text-align center
+    -webkit-border-radius 50%
+    -moz-border-radius 50%
+    border-radius 50%
+    border 1px solid white
+    display none !important
+    &:hover
+      -moz-opacity 1
+      opacity 1
+
+
+
+
+
+
+

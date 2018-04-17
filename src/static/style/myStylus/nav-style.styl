@@ -1,0 +1,98 @@
+.nav-ul
+  margin-top 0
+  li
+    padding 0 18px
+    position relative
+  a
+    font-size 16px
+    color black
+
+  a:hover
+    color #bb0000
+    background-color none !important
+    background none !important
+
+.nav-main
+  margin-top -1.5%
+  background-color #ffffff
+  -webkit-box-shadow none
+  -moz-box-shadow none
+  box-shadow none
+  border-bottom 1px solid #eeeeee
+  position relative
+
+  .btn
+    background-color white
+    border none
+.nav-main
+  .clicked
+    &:after
+      content ""
+      display block
+      position absolute
+      border-top  2px solid red
+      width 30px
+      left 40px
+.dropdown1
+  position relative
+  &:hover
+    .dropdown2
+      border 1px solid #dcdada
+      display block !important
+      z-index 99
+  .dropdown2
+    position absolute
+    background-color white
+    width 200px
+    display none
+    li
+      display block
+      background none !important
+      line-height 30px
+      margin-top 1%
+      &:hover
+        background none !important
+nav
+  .button-collapse
+    color black
+  .side-nav
+
+
+    .ifLogout
+
+      white-space 20px
+    .button-login
+      margin-left 60%
+      height 40px
+      background-color white
+      width 100px
+      padding-left 0
+      padding-right 0
+      -webkit-box-shadow none
+      -moz-box-shadow none
+      box-shadow none
+      border 1px solid #eee
+      -webkit-border-radius 10%
+      -moz-border-radius 10%
+      border-radius 10%
+      text-transform none
+      -webkit-transition all 0.1s
+      -moz-transition all 0.1s
+      -ms-transition all 0.1s
+      -o-transition all 0.1s
+      transition all 0.1s
+      @media screen and (min-width: 601px)
+        height auto
+      &:hover
+        border 1px solid #666666
+        -webkit-border-radius 10%
+        -moz-border-radius 10%
+        border-radius 10%
+    i
+      color black
+      padding-right 5%
+      font-size 1em
+    img
+      width 100%
+
+

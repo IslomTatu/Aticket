@@ -1,0 +1,111 @@
+.container-fluid#korzinka
+    #delete.modal(style="margin-top: 10% !important")
+        .headDelete(style="margin-left: 5%")
+            h5 Delete
+        .divider
+        .modal-content.center-align
+            p Do you want to delete this ticket from basket if you want click delete
+        .divider
+        .cardBtns
+            a.btn.modal-close.thanks.left no, thanks
+            a.btn.modal-close.delete.right Delete
+
+
+
+    .row
+        .col.l12.s12.center-align
+            h5 Tickets
+
+    .row.mainKorzinka
+        .col.l6.s12.leftTicketCard
+            .row
+                .col.l5.s5
+                    img(src="../../static/img/10.jpg")
+                .col.l7.s7
+                    h5 Title
+                    .timeForTicket
+                        i.fas.fa-calendar(style="display: inline")
+                        p(style="display: inline; margin-left: 5%") 24-fev.
+                            span.grey-text sun 16:30
+
+                    .placeForTicket
+                        i.fas.fa-map-marker(style="display: inline")
+                        p(style="display: inline; margin-left: 5%") where to go
+
+        .col.l6.s12.rightTicketCard
+            .row.ticket
+                .aboutTicket
+                    .row
+                        .col.l6.s6
+                            p.grey-text Where,
+                             span  ryad: 8, mesto: 50
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 50000
+                            p.font-weight-bold UZS
+                        .col.l2.s2
+                            p.grey-text 1 shtk.
+                        .col.l2.s2
+                            a.modal-trigger(style="color: black; cursor: pointer" href="#delete")
+                                i.fas.fa-times
+                    .row
+                        .col.l6.s6
+                            p.grey-text Service reset
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 50000 UZS
+                    .row(style="border-bottom: 2px solid #999 !important")
+                        .col.l6.s6
+                            p.grey-text Discounts
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 0 UZS
+            .row.ticket
+                .aboutTicket
+                    .row
+                        .col.l6.s6
+                            p.grey-text Where,
+                                span  ryad: 8, mesto: 50
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 50000
+                            p.font-weight-bold UZS
+                        .col.l2.s2
+                            p.grey-text 1 shtk.
+                        .col.l2.s2
+                            a.modal-trigger(style="color: black; cursor: pointer" href="#delete")
+                                i.fas.fa-times
+                    .row
+                        .col.l6.s6
+                            p.grey-text Service reset
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 50000 UZS
+                    .row(style="border-bottom: 2px solid #999 !important")
+                        .col.l6.s6
+                            p.grey-text Discounts
+                        .col.l2.s2.center-align.forTicket
+                            p.font-weight-bold 0 UZS
+            .row.countTicket
+                .col.l6.s6
+                    p All
+                .col.l6.s6
+                    p 100000 UZS
+        .col.l12.s12.buyTicket
+            .row
+                .col.l6.s12
+                    p choose payment type first!
+            .row
+                .col.l6.s12.payment
+                    a.paymentType(href="#buyy")
+                        img(src="../../static/img/click.png" style="height: 50px; width: auto" )
+
+                    a.paymentType(href="#buyy")
+                        img(src="../../static/img/payme.png" style="height: 50px; width: auto" )
+
+                    a.paymentType(href="#buyy")
+                        img(src="../../static/img/woywo.png" style="height: 50px; width: auto" )
+
+                    a.paymentType(href="#buyy")
+                        img(src="../../static/img/upay.png" style="height: 50px; width: auto" )
+
+                .col.l6.s12#buyy
+                    a.btn.right Buy ticket
+
+
+
