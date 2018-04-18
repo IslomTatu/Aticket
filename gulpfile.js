@@ -18,6 +18,6 @@ $.gulp.task('default', $.gulp.series(
 ));
 
 $.gulp.task('build', $.gulp.series(
-    $.gulp.parallel('pug', 'category', 'alone', 'korzinka', 'user', 'stylus', 'stylus:lib', 'stylus:mater', 'stylus:fonts', 'scripts', 'scripts:jquery', 'scripts:lib', 'img:build'),
+    $.gulp.parallel('pug', 'category', 'alone', 'korzinka', 'download', 'user', 'stylus', 'stylus:lib', 'stylus:mater', 'stylus:fonts', 'scripts', 'scripts:jquery', 'scripts:lib', 'img:build'),
     $.gulp.parallel('watch', 'serve')
 ));
