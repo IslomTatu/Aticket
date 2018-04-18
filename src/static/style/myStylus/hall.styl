@@ -43,6 +43,81 @@
       p
         display inline
         //margin-left 10px
+
+  .back
+    background-color transparent
+    color black
+    box-shadow none
+    border #999999 1px solid
+    -webkit-border-radius 5%
+    -moz-border-radius 5%
+    border-radius 5%
+    padding 0 2%
+    &:hover
+      background-color transparent
+      -webkit-box-shadow none
+      -moz-box-shadow none
+      box-shadow none
+      border 1px solid black
+  .buy
+    background-color #fc0
+    color black
+    -webkit-box-shadow none
+    -moz-box-shadow none
+    box-shadow none
+    border #999999 1px solid
+    -webkit-border-radius 5%
+    -moz-border-radius 5%
+    border-radius 5%
+    padding 0 2%
+    width 100%
+    &:hover
+      background-color #f0bd00
+      -webkit-box-shadow none
+      -moz-box-shadow none
+      box-shadow none
+      border 1px solid black
+
+  .room-scheme
+    border 2px solid darkblue !important
+    text-align center !important
+    margin 0 auto !important
+    overflow auto !important
+    width 100%
+    display block
+    justify-content center
+    #room-scheme
+      border 1px solid black
+      width 600px !important
+      text-align center
+      padding 1%
+      .heyo
+        cursor pointer
+        -moz-transition 0.3s
+        -o-transition 0.3s
+        -webkit-transition 0.3s
+        transition 0.3s
+        &:hover
+          r 10
+
+      .active
+        display block
+
+
+      .disabled
+        cursor initial
+        fill grey !important
+        r 2
+      .bought
+        fill #fc0 !important
+        r 20
+        cursor pointer
+
+#hall-scheme
+  .modal-footer
+    border-top 1px solid #cbc9c9
+    height auto !important
+
 svg
   border 1px solid #eeeeee
   -webkit-border-radius 5%
@@ -54,79 +129,12 @@ svg
   circle
     stroke grey
 
-.back
-  background-color transparent
-  color black
-  box-shadow none
-  border #999999 1px solid
-  -webkit-border-radius 5%
-  -moz-border-radius 5%
-  border-radius 5%
-  padding 0 2%
-  &:hover
-    background-color transparent
-    -webkit-box-shadow none
-    -moz-box-shadow none
-    box-shadow none
-    border 1px solid black
-.buy
-  background-color #fc0
-  color black
-  -webkit-box-shadow none
-  -moz-box-shadow none
-  box-shadow none
-  border #999999 1px solid
-  -webkit-border-radius 5%
-  -moz-border-radius 5%
-  border-radius 5%
-  padding 0 2%
-  &:hover
-    background-color #f0bd00
-    -webkit-box-shadow none
-    -moz-box-shadow none
-    box-shadow none
-    border 1px solid black
-
-.room-scheme
-  text-align center !important
-  margin 0 auto !important
-
-
-#room-scheme
-  overflow scroll
-  .heyo
-    cursor pointer
-    -moz-transition 0.3s
-    -o-transition 0.3s
-    -webkit-transition 0.3s
-    transition 0.3s
-    &:hover
-      r 20
-
-  .active
-    display block
-
-
-  .disabled
-    cursor initial
-    fill grey !important
-    r 5
-  .bought
-    fill #fc0 !important
-    r 40
-    cursor pointer
-
-#hall-scheme
-  .modal-footer
-    border-top 1px solid #cbc9c9
-    height auto !important
-
-@media screen and (max-width: 600px)
-  svg
-    width 30px !important
-    height 30px !important
-  circle
-    cx 15
-    cy 15
-    r 5
+//@media screen and (max-width: 600px)
+//  svg
+//    width 30px !important
+//    height 30px !important
+//  circle
+//    cx 15
+//    cy 15
+//    r 5
 
