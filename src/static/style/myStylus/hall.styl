@@ -79,7 +79,6 @@
       border 1px solid black
 
   .room-scheme
-    border 2px solid darkblue !important
     text-align center !important
     margin 0 auto !important
     overflow auto !important
@@ -87,10 +86,12 @@
     display block
     justify-content center
     #room-scheme
-      border 1px solid black
       width 600px !important
       text-align center
+      display block
       padding 1%
+      margin 1% auto !important
+      float none !important
       .heyo
         cursor pointer
         -moz-transition 0.3s
@@ -112,6 +113,13 @@
         fill #fc0 !important
         r 20
         cursor pointer
+
+      #istiklol
+        path
+          cursor pointer
+          fill #7bd6ff
+          &:hover
+            fill #679fff
 
 #hall-scheme
   .modal-footer
