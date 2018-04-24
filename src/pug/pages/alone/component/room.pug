@@ -26,7 +26,8 @@
             label.time#timeAction 16:30
 
     .row(style="text-align: center !important;").room-scheme
-        #room-scheme(style="text-align: center;")
+        #room-scheme1(style="text-align: center; border: 1px solid black; margin: 5%; padding: 5%")
+        #room-scheme(style="text-align: center; border: 1px solid black; margin: 5%; padding: 5%; display:none")
             .screen(style="height: 100px")
             //******************100$******************************
             //svg(height="40" width="40")
@@ -39,6 +40,8 @@
 
     .row.modal-footer
 
+        .col.s3.l3
+            a.back.btn Back
         .col.s6.l6.order.left
             h3.count(style="display:inline") 0
             h3(style="display:inline") $

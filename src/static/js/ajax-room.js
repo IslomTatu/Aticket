@@ -1,16 +1,23 @@
 $(document).ready(function () {
     $(".data").click(function () {
+
+        var enterFirst = true;
+
         $(".loader1").fadeOut();
+        $("#room-scheme1").empty();
         $("#room-scheme").empty();
         $(".count").text("0");
 
         var instance = $(".data").attr("data-instance");
         var hall = $(".data").attr("data-hall");
 
-        $("#room-scheme").load('../../istiklol.svg', function () {
+        $("#room-scheme1").load('../../istiklol.svg', function () {
+            $("#room-scheme1").show();
+            $("#room-scheme").hide();
             $("path").click(function () {
-                $("#room-scheme").children().hide();
-                $.getJSON("../../room.json", function (data) {
+                $("#room-scheme1").hide();
+                $("#room-scheme").show();
+                $.getJSON("../../room3.json", function (data) {
 
                     if(data.info) {
                         $("#imgAction").attr("src", data.info.poster);
@@ -25,16 +32,28 @@ $(document).ready(function () {
                         $("#whereAction").text(data.info.hall);
                         $("#timeAction").text(timeAction + " : " + minuteAction);
                     }
-
+                    // $("#room-scheme").append("<div id='ryad' style='border: 1px solid black; display: inline !important; float: left'></div>");
+                    // $("#room-scheme").append("<div id='mesto' style='display: inline; float: right'></div>")
                     $.each(data, function (key, value) {
-                        console.log(value.length);
-                        $("#room-scheme").append("<span style='position: relative; top: -15px; right: 10px'>ryad: "+(key+1)+"</span>");
+                        var nextRow = true;
+                        //console.log(value.length);
+                        //console.log(value);
                         for(var v in value) {
                             //console.log(value[v].place + " in row " + value[v].row);
-
+                            if(nextRow && value[v].row) {
+                                $("#room-scheme").append("<span style='margin-right: 2%'>ryad: " + (value[v].row) + "</span>");
+                                nextRow = false;
+                            }
                             var svg = $("<svg height=\"20\" width=\"20\"> <circle cx=\"10\" cy=\"10\" r=\"5\" stroke=\"black\" stroke-width=\"1\" fill=\"#31D61E\"/> </svg>");
+                            var empty = $("<svg class='emptySvg' height='20' width='20' fill='white'>");
                             svg.attr("id", "row_"+value[v].row+"_"+value[v].place);
-                            $("#room-scheme").append(svg);
+                            if(value[v].empty){
+                                $("#room-scheme").append(empty);
+                            }
+                            else {
+                                $("#room-scheme").append(svg);
+
+                            }
 
 
                              $("#row_" + value[v].row + "_" + value[v].place).find('circle').attr({
@@ -57,14 +76,16 @@ $(document).ready(function () {
 
                     $("circle").each(function () {
                         if($(this).attr('data-status')==="1") {
-                            $(this).addClass("enabled heyo top");
-                            jQuery(".top").tipso({
+                            $(this).addClass("enabled heyo top-tipso");
+                            jQuery(".top-tipso").tipso({
                                 titleContent: "",
                                 position: "top",
                                 color: "black",
                                 background: "#eee",
                                 width: "100",
-                                speed: 100
+                                speed: 100,
+                                offsetX: 0,
+                                offsetY: 0
                             });
                         }
                         else $(this).addClass("disabled");
@@ -101,7 +122,14 @@ $(document).ready(function () {
                     $("#hall-scheme").empty().css("text-align", "center").append("<h5 style='width: 100%'>Sorry hall is not found</h5>")
                 });
 
-            })
+
+                $(".back").click(function () {
+                    $("#room-scheme").hide();
+                    $("#room-scheme1").show();
+                });
+
+            });
+
         });
 
         // $.getJSON("../../room.json", function (data) {
