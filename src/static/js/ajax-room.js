@@ -81,11 +81,9 @@ $(document).ready(function () {
                                 titleContent: "",
                                 position: "top",
                                 color: "black",
-                                background: "#eee",
+                                background: "#eeeeee",
                                 width: "100",
-                                speed: 100,
-                                offsetX: 0,
-                                offsetY: 0
+                                speed: 100
                             });
                         }
                         else $(this).addClass("disabled");
