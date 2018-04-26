@@ -19,6 +19,7 @@
     "materialize-css": "^0.100.2",
     "slick-carousel": "^1.8.1",
     "tipso": "^1.0.8",
+    "tooltipster": "^4.2.6",
     "vue": "^2.5.13",
     "vue-carousel": "^0.6.5",
     "vue-router": "^3.0.1",
