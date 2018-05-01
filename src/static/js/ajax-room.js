@@ -38,12 +38,19 @@ $(document).ready(function () {
 
                     var id = $(this).attr("id");
 
+                    if(Object.keys(data.hallScheme[id][0]).length > 50){
+                        $("#room-scheme").css("width", "2500px");
+                    }
+                    else{
+                        $("#room-scheme").css("width", "800px")
+                    }
+                    console.log(Object.keys(data.hallScheme[id][0]).length);
                     $.each(data.hallScheme[id], function (key, value) {
                             var nextRow = true;
                             //console.log(value.length);
-                            //console.log(value);
+
                             for(var v in value) {
-                                console.log(v);
+                                //console.log(v);
                                 //console.log(value[v].place + " in row " + value[v].row);
                                 if(nextRow && value[v].row) {
                                     $("#room-scheme").append("<span style='margin-right: 2%'>ryad: " + (value[v].row) + "</span>");
@@ -76,7 +83,7 @@ $(document).ready(function () {
                         });
 
                         $("circle").each(function () {
-                            if($(this).attr('data-status')==="1") {
+                            if($(this).attr('data-status')==="1" || $(this).attr('data-status')==="0") {
                                 $(this).addClass("enabled heyo top-tipso");
                                 jQuery(".top-tipso").tipso({
                                     titleContent: "",
@@ -84,7 +91,9 @@ $(document).ready(function () {
                                     color: "black",
                                     background: "#eeeeee",
                                     width: "100",
-                                    speed: 100
+                                    speed: 100,
+                                    offsetY: 0,
+                                    offsetX: 0
                                 });
                             }
                             else $(this).addClass("disabled");
